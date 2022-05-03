@@ -1,0 +1,38 @@
+.header {
+  margin-top: 33px;
+}
+
+.header .col {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.main-nav__item a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "TTNorms-Medium";
+}
+
+.main-nav__item a:hover {
+  color: #fff;
+}
+
+.header .col-basket {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}

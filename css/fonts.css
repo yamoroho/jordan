@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+@font-face {
+  font-family: "Fontspring";
+  src: local("Fontspring"), url("../fonts/Fontspring-DEMO-theseasons-bd.woff2") format("woff2"), url("../fonts/Fontspring-DEMO-theseasons-bd.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TTNorms-Medium";
+  src: local("TTNorms-Medium"), local("TTNorms-Medium"), url("../fonts/TTNorms-Medium.woff2") format("woff2"), url("../fonts/TTNorms-Medium.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TTNorms-Regular";
+  src: local("TTNorms-Regular"), local("TTNorms-Regular"), url("../fonts/TTNorms-Regular.woff2") format("woff2"), url("../fonts/TTNorms-Regular.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}

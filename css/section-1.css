@@ -1,13 +1,30 @@
+.section-1 {
+  margin-bottom: 70px;
+}
+
 .section-1 .thumbnail-bg__type-1::before {
   content: "";
   position: absolute;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  right: -15%;
-  top: -45%;
-  width: 100%;
+  right: -35%;
+  top: -30%;
+  width: 150%;
   height: 100%;
   z-index: -1;
   background-image: url("../img/shadow-1.svg");
+}
+
+.section-1 .thumbnail-bg__type-2 {
+  margin-top: 70px;
+}
+
+.section-1__header {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  margin-top: 25px;
 }

@@ -6,19 +6,23 @@
   margin: 0 
   padding: 0
 
+.w-80
+  width: 80%
+
 .body
   background: #141414
-  font-family: "TTNorms-Regular" 
+  font-family: "TTNorms-Regular", sans-serif
   color: #fff
 
 
 .block-header
-  font-family: "Fontspring"
+  font-family: "Fontspring", sans-serif
   color: #fff
   text-transform: uppercase
   &__1
     font-size: 150px
     margin-top: 30px
+    margin-bottom: -10px
   &__2
     font-size: 40px
 
@@ -27,16 +31,19 @@
   background-image: linear-gradient(180deg, rgba(199,61,59,1) 0%, rgba(199,61,59,1) 50%, rgba(73,32,31,1) 100%)
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
+  &__simple
+    color: #EB5251
+
 
 .slogan-text
-  font-family: "TTNorms-Regular"
+  font-family: "TTNorms-Regular", sans-serif
   text-transform: uppercase
-  font-size: 17px
+  font-size: 16px
   margin-bottom: 80px
 
 .thumbnail
-  width: 80%
   position: relative
+  margin-bottom: 70px
   &::after
     content: ""
     position: absolute
@@ -54,13 +61,39 @@
   img 
     width: 100% 
 
-  &-semicircle    
+  &-semicircle     
     img
       border-radius: 50% 50% 0 0
 
-  &-bg__type-1::after
+  &-bg__type
+    &-1::after
       background-image: url("../img/bg_type-1.svg")
       width: 135%
 
+    &-2::after
+      left: 7%
+      top: -5.5%
+      transform: none
+      border: 2px solid #fff
+      opacity: 0.5
+      
+
+
   
- 
+.content
+  &-title
+    font-family: "TTNorms-Medium", sans-serif
+    font-size: 18px
+    text-transform: uppercase
+    margin-bottom: 15px
+
+  &-text
+    font-size: 17px
+    margin-bottom: 30px
+    width: 80%
+
+  &-button
+    background-color: #C73D3B
+    padding: 15px 50px
+    border: none
+    color: #fff

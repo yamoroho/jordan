@@ -2,12 +2,33 @@
 @import 'header'; 
 @import 'section-1';
 
+
+$max-xl: 1399.98px
+$max-lg: 1199.98px
+$max-md: 991.98px
+$max-sm: 767.98px
+$max-xs: 575.98px
+
 *
   margin: 0 
   padding: 0
 
 .w-80
-  width: 80%
+  width: 80% 
+
+.visible-sm
+  display: none   
+.overflow-hidden
+  overflow: hidden
+
+@media (max-width: $max-xs )
+  .hide-sm
+    display: none
+  .visible-sm
+    display: block 
+
+
+
 
 .body
   background: #141414
@@ -97,3 +118,93 @@
     padding: 15px 50px
     border: none
     color: #fff
+    font-size: 17px
+
+@media (max-width: $max-xl )
+  .block-header
+    &__1
+      font-size: 129px
+
+  .slogan-text 
+    font-size: 14px
+
+  .content
+    &-title
+      font-size: 17px
+    &-text
+      font-size: 16px
+ 
+@media (max-width: $max-lg )
+  .block-header
+    &__1
+      font-size: 108px
+
+  .slogan-text 
+    font-size: 11.8px
+
+  .content
+    &-title
+      font-size: 15px
+      margin-bottom: 9px
+    &-text
+      font-size: 14px
+      margin-bottom: 22px
+    &-button
+    
+@media (max-width: $max-md )
+  .hide-col
+    display: none
+
+  .block-header
+    &__1
+      font-size: 88px
+      margin-bottom: 0
+      margin-top: 15px
+
+  .content
+    &-title
+      margin-bottom: 12px
+    &-text
+      margin-bottom: 35px
+      width: 90%
+
+  .thumbnail
+    width: 90%
+    margin-bottom: 30px
+    
+@media (max-width: $max-sm )
+  .block-header
+    &__1
+      font-size: 65px
+
+  .slogan-text 
+    font-size: 10px
+
+  .content
+    &-title
+      font-size: 12px
+    &-text
+      font-size: 11px
+    &-button
+      font-size: 15px
+      padding: 10px 30px
+
+@media (max-width: $max-xs )
+
+  .block-header
+    &__1
+      font-size: 11vw
+    
+  .slogan-text 
+    display: none
+
+  .thumbnail
+    width: 95%
+
+  .content
+    &-title
+      font-size: 15px
+      margin-bottom: 7px
+    &-text
+      font-size: 15px
+      width: 100%

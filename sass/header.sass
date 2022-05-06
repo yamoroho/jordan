@@ -1,9 +1,22 @@
+$max-xl: 1399.98px
+$max-lg: 1199.98px
+$max-md: 991.98px
+$max-sm: 767.98px
+$max-xs: 575.98px
+  
 .header
   margin-top: 33px
 
 .header .col
   align-items: center
   display: flex
+  &.visible-sm
+    display: none
+
+@media (max-width: $max-xs )
+  .header .col
+    &.visible-sm
+      display: flex
 
 .main-nav
   display: flex
@@ -14,9 +27,125 @@
   color: #fff 
   text-decoration: none
   font-family: "TTNorms-Medium"
+  font-size: 14px
   &:hover
     color: #fff 
 
 
 .header .col-basket
   justify-content: flex-end
+
+@media (max-width: $max-xl )
+  .logo img
+    width: 110px
+
+  .main-nav__item a
+    font-size: 13px
+
+  .main-basket img
+    width: 24px
+
+@media (max-width: $max-lg )
+  .logo img
+    width: 95px
+
+  .main-nav__item a
+    font-size: 12px
+
+  .main-basket img
+    width: 22px
+
+@media (max-width: $max-md )
+  .logo img
+    width: 80px
+
+  .main-nav__item a
+    font-size: 12px
+
+  .main-basket img
+    width: 22px
+
+@media (max-width: $max-xs )
+  .header
+    .container
+      position: relative
+  .logo
+    margin: 0 auto
+    &__container
+      order: 3
+
+  .col-basket
+    order: 4
+
+  .burger
+    &__button
+      cursor: pointer
+      width: 18px
+      height: 20px
+      position: relative
+      &::before
+        position: absolute
+        content: "" 
+        width: 18px
+        height: 1px
+        background: #fff
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        margin-top: -5px
+        transition: .3s
+      &::after
+        position: absolute
+        content: "" 
+        width: 18px
+        height: 1px
+        background: #fff
+        top: 50%
+        left:  50%
+        transform: translate(-50%, -50%)
+        margin-top: 5px
+        transition: .3s
+         
+      &.active
+        .burger__line
+          transform: translateY(-50%) rotate(90deg) 
+          opacity: 0
+        &::after
+          transform: translate(-50%, -50%) rotate(45deg)
+          margin: 0
+        &::before
+          transform: translate(-50%, -50%) rotate(-45deg)
+          margin: 0
+    &__line
+      display: block
+      width: 15px
+      height: 1px
+      background: #fff
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      transition: .3s
+  .main-nav
+    flex-direction: column
+    justify-content: flex-start
+    &__item
+      a
+        font-size: 14px
+    &__container.col
+      align-items: flex-start
+      position: absolute
+      width: 100%
+      top: 57px
+      left: 0
+      background: #141414
+      z-index: 5 
+      padding-left: 40px
+      height: 0
+      transition: 0.3s
+      visibility: hidden
+      opacity: 0
+      &.active
+        height: 100vh
+        visibility: visible
+        opacity: 1
+      

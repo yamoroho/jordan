@@ -2,23 +2,48 @@
 @import 'header'; 
 @import 'section-1';
 
+
+$max-xl: 1399.98px
+$max-lg: 1199.98px
+$max-md: 991.98px
+$max-sm: 767.98px
+$max-xs: 575.98px
+
 *
   margin: 0 
   padding: 0
 
+.w-80
+  width: 80% 
+
+.visible-sm
+  display: none   
+.overflow-hidden
+  overflow: hidden
+
+@media (max-width: $max-xs )
+  .hide-sm
+    display: none
+  .visible-sm
+    display: block 
+
+
+
+
 .body
   background: #141414
-  font-family: "TTNorms-Regular" 
+  font-family: "TTNorms-Regular", sans-serif
   color: #fff
 
 
 .block-header
-  font-family: "Fontspring"
+  font-family: "Fontspring", sans-serif
   color: #fff
   text-transform: uppercase
   &__1
     font-size: 150px
     margin-top: 30px
+    margin-bottom: -10px
   &__2
     font-size: 40px
 
@@ -27,16 +52,19 @@
   background-image: linear-gradient(180deg, rgba(199,61,59,1) 0%, rgba(199,61,59,1) 50%, rgba(73,32,31,1) 100%)
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
+  &__simple
+    color: #EB5251
+
 
 .slogan-text
-  font-family: "TTNorms-Regular"
+  font-family: "TTNorms-Regular", sans-serif
   text-transform: uppercase
-  font-size: 17px
+  font-size: 16px
   margin-bottom: 80px
 
 .thumbnail
-  width: 80%
   position: relative
+  margin-bottom: 70px
   &::after
     content: ""
     position: absolute
@@ -54,13 +82,129 @@
   img 
     width: 100% 
 
-  &-semicircle    
+  &-semicircle     
     img
       border-radius: 50% 50% 0 0
 
-  &-bg__type-1::after
+  &-bg__type
+    &-1::after
       background-image: url("../img/bg_type-1.svg")
       width: 135%
 
+    &-2::after
+      left: 7%
+      top: -5.5%
+      transform: none
+      border: 2px solid #fff
+      opacity: 0.5
+      
+
+
   
+.content
+  &-title
+    font-family: "TTNorms-Medium", sans-serif
+    font-size: 18px
+    text-transform: uppercase
+    margin-bottom: 15px
+
+  &-text
+    font-size: 17px
+    margin-bottom: 30px
+    width: 80%
+
+  &-button
+    background-color: #C73D3B
+    padding: 15px 50px
+    border: none
+    color: #fff
+    font-size: 17px
+
+@media (max-width: $max-xl )
+  .block-header
+    &__1
+      font-size: 129px
+
+  .slogan-text 
+    font-size: 14px
+
+  .content
+    &-title
+      font-size: 17px
+    &-text
+      font-size: 16px
  
+@media (max-width: $max-lg )
+  .block-header
+    &__1
+      font-size: 108px
+
+  .slogan-text 
+    font-size: 11.8px
+
+  .content
+    &-title
+      font-size: 15px
+      margin-bottom: 9px
+    &-text
+      font-size: 14px
+      margin-bottom: 22px
+    &-button
+    
+@media (max-width: $max-md )
+  .hide-col
+    display: none
+
+  .block-header
+    &__1
+      font-size: 88px
+      margin-bottom: 0
+      margin-top: 15px
+
+  .content
+    &-title
+      margin-bottom: 12px
+    &-text
+      margin-bottom: 35px
+      width: 90%
+
+  .thumbnail
+    width: 90%
+    margin-bottom: 30px
+    
+@media (max-width: $max-sm )
+  .block-header
+    &__1
+      font-size: 65px
+
+  .slogan-text 
+    font-size: 10px
+
+  .content
+    &-title
+      font-size: 12px
+    &-text
+      font-size: 11px
+    &-button
+      font-size: 15px
+      padding: 10px 30px
+
+@media (max-width: $max-xs )
+
+  .block-header
+    &__1
+      font-size: 11vw
+    
+  .slogan-text 
+    display: none
+
+  .thumbnail
+    width: 95%
+
+  .content
+    &-title
+      font-size: 15px
+      margin-bottom: 7px
+    &-text
+      font-size: 15px
+      width: 100%

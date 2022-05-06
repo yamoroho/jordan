@@ -173,6 +173,9 @@
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+  .main-nav__item a {
+    font-size: 14px;
+  }
   .main-nav__container.col {
     -webkit-box-align: start;
         -ms-flex-align: start;

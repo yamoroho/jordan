@@ -121,6 +121,9 @@
     margin-left: auto;
   }
   .section-1 .thumbnail-bg__type-2 {
-    margin-top: 30px;
+    margin-top: 15px;
+  }
+  .section-1 .thumbnail-bg__type-2::after {
+    display: none;
   }
 }

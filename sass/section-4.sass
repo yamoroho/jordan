@@ -1,0 +1,158 @@
+@import 'variables';
+
+.section-4
+  position: relative
+  overflow: hidden
+
+  .slider
+    &__wrapper
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      transition: 1s
+    &__item
+      padding: 0 15px
+      
+  .owl-carousel
+    width: calc( 100% - 90px )
+    margin: 35px auto 90px
+    .owl-nav      
+      .owl-prev
+        left: -35px
+        position: absolute
+        top: 50%
+        transform: translate(-50%, -50%)
+      .owl-next
+        right: -75px
+        position: absolute
+        top: 50%
+        transform: translate(-50%, -50%)
+
+.type
+  &-gender
+    display: flex
+    font-family: "TTNorms-Regular"
+    margin-bottom: 45px
+    font-size: 14px
+    &__item
+      opacity: .8
+      text-transform: uppercase
+      margin-right: 30px
+      &.active
+        text-decoration: underline
+        opacity: 1
+        font-family: "TTNorms-Medium"
+  &-header    
+    font-family: "TTNorms-Medium"
+    font-size: 20px
+    text-transform: uppercase
+    .select
+      font-family: "TTNorms-Regular"
+      margin-left: 10px
+  &-color
+    &__wrapper
+      display: flex
+      width: 325px
+      justify-content: space-between
+      flex-wrap: wrap
+      margin-top: 25px
+    &__item
+      width: 20%
+      margin-bottom: 30px
+      cursor: pointer
+    &__circle
+      width: 40px
+      height: 40px
+      border-radius: 100px
+      &.color-1
+        background-color: #fff
+      &.color-2
+        background-color: #FFECCF
+      &.color-3
+        background-color: #F69C9C
+      &.color-4
+        background-color: #8CADDE
+      &.color-5
+        background-color: #FFF969
+      &.color-6
+        background-color: #010101
+      &.color-7
+        background-color: #969696
+      &.color-8
+        background-color: #AA7354
+      &.color-9
+        background-color: #F4362A
+      &.color-more
+        background-color: #616161
+  &-link
+    font-family: "TTNorms-Regular"
+    font-size: 14px
+    color: #fff
+    text-decoration: underline
+    text-transform: uppercase
+  &-size
+    margin-top: 60px
+    &__wrapper
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      width: 240px
+      margin-top: 30px
+      margin-bottom: 20px
+    &__item
+      width: 25%
+      cursor: pointer
+      margin-bottom: 35px
+    font-family: "TTNorms-Regular"
+    font-size: 18px
+
+  &-price
+    margin-top: 60px
+    &__name
+      margin-top: 24px
+      margin-bottom: 20px
+      font-family: "TTNorms-Regular"
+      font-size: 17px
+      width: 210px
+    &__price
+      font-size: 21px
+      font-family: "TTNorms-Medium"
+      margin-bottom: 19px
+
+
+
+@media (max-width: $max-md )  
+  .type
+    &-header
+      font-size: 17px
+    &-color__wrapper
+      margin-top: 20px
+    &-size__wrapper
+      margin-top: 20px
+    &-price__name
+      font-size: 15px
+      margin-top: 20px
+
+@media (max-width: $max-sm )
+  .type-container
+    width: 400px !important
+    margin: 0 auto !important
+
+  
+      
+@media (max-width: $max-xs )  
+  .section-4
+    .owl-carousel
+      width: 100%
+      .owl-nav
+        display: flex
+        justify-content: space-between
+        .owl-prev
+          position: initial
+          transform: none
+          margin: 10px 10px
+        .owl-next
+          position: initial
+          transform: none
+          margin: 10px 10px
+      
